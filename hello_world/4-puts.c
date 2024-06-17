@@ -1,5 +1,4 @@
 
-//main : donne le main
 #include <stdio.h>
 int main()
 {
