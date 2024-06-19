@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * Description:print l'alphabet 
+ * Description:print l'alphabet
  *
  *
  * Return: Always 0 (Success)
@@ -21,5 +21,5 @@ for (j = 'A'; j <= 'Z'; j++)
 
 putchar(j);
 
-return(0);
+return (0);
 }
