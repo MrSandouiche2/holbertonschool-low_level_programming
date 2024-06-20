@@ -18,10 +18,10 @@ putchar(i);
 
 if
 (i != '9')
-putchar('\n');
+
 putchar(',');
 putchar(' ');
-
+putchar('\n');
 }
 
 
