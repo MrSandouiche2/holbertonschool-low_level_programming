@@ -14,7 +14,7 @@ int e;
 for (e = 97; e <= 122; e++)
 
 	_putchar(e);
-	_putchar('\n')
+	_putchar('\n');
 
 return;
 }
