@@ -10,39 +10,34 @@
  * Return: Always 0 (Success)
  */
 
-
-
 char *_strdup(char *str)
 {
-int i;
+	int i;
 
-char *duplicate;
+	char *duplicate;
 
-int length = 0;
+	int length = 0;
 
 	if (str == NULL)
-{
-	return (NULL);
-}
+	{
+		return (NULL);
+	}
 
+	while (str[length] != '\0')
+	{
+		length++;
+	}
 
-while (str[length] != '\0')
-{
-	length++;
-}
+	duplicate = (char *)malloc((length + 1) * sizeof(char));
 
-
-
-duplicate = (char *)malloc((length + 1) * sizeof(char));
-
-if (duplicate == NULL)
-{
-	return (NULL);
-}
-for (i = 0; i <= length; i++)
-{
-	duplicate[i] = str[i];
-}
-duplicate[length] = '\0';
-return (duplicate);
+	if (duplicate == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i <= length; i++)
+	{
+		duplicate[i] = str[i];
+	}
+	duplicate[length] = '\0';
+	return (duplicate);
 }
