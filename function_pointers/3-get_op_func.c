@@ -1,6 +1,12 @@
 #include "3-calc.h"
 #include <string.h>
 
+/**
+ * get_op_func - necessaire pour calcul
+ *@s: pointeur
+ * Return: Always 0.
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
