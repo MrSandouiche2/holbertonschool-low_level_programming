@@ -18,3 +18,4 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 void print_chessboard(char (*a)[8]);
 char *_strcat(char *dest, char *src);
+char *_strncat(char *dest, char *src, int n);
