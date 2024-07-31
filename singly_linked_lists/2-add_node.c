@@ -1,6 +1,6 @@
 #include "lists.h"
-#include <string.h> /* Pour strdup et strlen */
-#include <stdlib.h> /* Pour malloc et free */
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * add_node - Ajoute un nouveau nœud au début d'une liste chaînée.
@@ -11,28 +11,24 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new_node;
-	char *duplicated_str;
-	size_t str_len;
+	list_t *i;
+	unsigned int len = 0;
 
-	new_node = malloc(sizeof(list_t));
-	if (new_node == NULL)
+	i = malloc(sizeof(list_t));
+	if (i)
 	{
+		i->str = strdup(str);
+		if (i->str)
+		{
+			while (i->str[len])
+				len++;
+			i->len = len;
+			i->next = *head;
+			*head = i;
+			return (i);
+		}
+		free(i);
 		return (NULL);
 	}
-
-	duplicated_str = strdup(str);
-	if (duplicated_str == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
-
-	str_len = strlen(str);
-	new_node->str = duplicated_str;
-	new_node->len = str_len;
-	new_node->next = *head;
-	*head = new_node;
-
-	return (new_node);
+	return (NULL);
 }
